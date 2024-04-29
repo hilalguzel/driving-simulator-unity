@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
         //We will move the vehicle forward
         // transform.Translate(0,0,1);
 
-        transform.Translate(Vector3.forward); //same function as above line of code
+
+        //We get change according to time (1m forward per second)
+        transform.Translate(Vector3.forward * Time.deltaTime * 20);  //and for speed *20
     }
 }
